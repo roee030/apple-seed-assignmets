@@ -1,0 +1,16 @@
+{
+  "name": "exercises",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "figlet": "^1.4.0",
+    "random-words": "^1.1.1",
+    "readline-sync": "^1.4.10"
+  }
+}
