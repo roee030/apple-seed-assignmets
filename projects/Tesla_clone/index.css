@@ -3,6 +3,7 @@
 	margin: 0;
 	box-sizing: border-box;
 }
+
 .header {
 	font-family: 'Krona One', sans-serif;
 	height: 100vh;
@@ -11,29 +12,35 @@
 	background-size: cover;
 	position: relative;
 }
+
 .navbar {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	height: 6vh;
 }
+
 .logo-img {
 	height: 150px;
 	margin: 0 auto;
 	padding: 0 2rem;
 }
+
 .nav-header-menu {
 	margin-left: 8rem;
 }
+
 .nav-header-menu a {
 	text-decoration: none;
 	color: white;
 	margin: 10px;
 }
+
 .nav-side-menu {
 	display: flex;
 	align-items: center;
 }
+
 .nav-side-menu a {
 	text-decoration: none;
 	color: white;
@@ -44,6 +51,7 @@
 .nav-hamburger-icon img {
 	height: 60px;
 }
+
 .title {
 	position: absolute;
 	top: 20%;
@@ -51,6 +59,7 @@
 	transform: translate(-50%, -50%);
 	color: white;
 }
+
 .info {
 	position: absolute;
 	color: white;
@@ -60,31 +69,39 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
+
 .info div {
 	padding: 1.5rem;
 }
+
 .info-box {
 	border-right: 5px solid red;
 }
+
 .info span {
 	font-size: 30px;
 }
+
 .info p {
 	margin-top: 15px;
 	font-size: 12px;
 	text-align: center;
 }
+
 .info-box {
 	border-right: 1px solid white;
 }
+
 .order-btn {
 	align-self: center;
 }
+
 .order-btn a:hover {
 	transition: all 0.5s ease;
 	background-color: white;
 	color: black;
 }
+
 .order-btn a {
 	font-size: 0.9rem;
 	padding: 1rem 2rem;
@@ -95,6 +112,7 @@
 }
 
 /* Safety section */
+
 .safety {
 	display: flex;
 	height: 100vh;
@@ -105,40 +123,49 @@
 	align-content: center;
 	padding: 1rem 3rem;
 }
+
 .safety-logo {
 	height: 120px;
 	padding: 0;
 }
-.safety-info > p {
+
+.safety-info>p {
 	font-family: 'Krona One', sans-serif;
 	font-weight: 300;
 	font-size: 1rem;
 }
+
 .safety-title {
 	font-weight: bold;
 	font-family: 'Krona One', sans-serif;
 	margin-bottom: 10px;
 }
+
 .safety-description {
 	font-size: 4px;
 }
+
 .box-rating {
 	margin-top: 2rem;
 	background: #f4f4f4;
 	padding: 2rem;
 	border-radius: 20px;
 }
+
 .safety-img {
 	background: #f4f4f4;
 }
+
 .safety-img img {
 	width: 90%;
 }
+
 .box-rating-title {
 	font-size: 30px;
 	font-family: sans-serif;
 	text-align: center;
 }
+
 .box-rating-details {
 	display: flex;
 	font-family: sans-serif;
