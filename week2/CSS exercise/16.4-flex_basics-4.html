@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			.box1 {
+				display: flex;
+				justify-content: space-between;
+			}
+			.logo {
+				flex-grow: 1;
+			}
+			.box {
+				padding: 0 1rem;
+			}
+			.nav {
+				display: flex;
+			}
+			@media (max-width: 500px) {
+				.box1 {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+				}
+				.nav {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box1">
+			<div class="box logo">AppleSeeds</div>
+			<div class="nav">
+				<div class="box">Home</div>
+				<div class="box">About</div>
+				<div class="box">Portfolio</div>
+				<div class="box">Contact</div>
+			</div>
+		</div>
+	</body>
+</html>
