@@ -1,0 +1,164 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --primary-color: #fffbed;
+  --secondary-nav-color: #ffeaa0;
+  --primary-lightSwitch-color: #8b9edf;
+  --card-background: #f8f0d8;
+  --card-title: #292313;
+  --a-color: #917a3f;
+  --button: #f8f0d8;
+  --button-color-font: black;
+}
+
+.dark-mode {
+  --primary-color: rgb(56, 15, 45);
+  --secondary-nav-color: rgb(119, 24, 95);
+  --primary-lightSwitch-color: #aeaeb8;
+  --card-background: #c51db7;
+  --card-title: black;
+  --a-color: #fff;
+  --button: #c51db7;
+  --button-font-color: white;
+  transition-duration: 2s;
+}
+
+.container {
+  background: var(--primary-color);
+  min-height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background: var(--secondary-nav-color);
+  transition-duration: 2s;
+}
+
+.right-nav-container {
+  display: flex;
+  align-items: center;
+}
+
+.light-switch {
+  position: relative;
+  display: inline-block;
+  height: 20px;
+  width: 45px;
+  border: solid 2px var( --primary-lightSwitch-color);
+  border-radius: 20px;
+  background: var(--primary-color);
+  cursor: pointer;
+  transition-duration: 2s;
+}
+
+.light-switch:after {
+  content: "";
+  position: absolute;
+  top: 6%;
+  left: 4px;
+  height: 85%;
+  width: 35%;
+  background: white;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+
+.light-switch.on::after {
+  transform: translateX(19px);
+}
+
+.card-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  height: 250px;
+  width: 200px;
+  margin: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  background-color: var(--card-background);
+  transition: 2s;
+}
+
+.card:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.card-image {
+  background: url("golan.jpg") no-repeat center center/cover;
+  height: 150px;
+}
+
+.card-bottom {
+  height: calc(100% - 150px);
+  padding: 5px;
+}
+
+.card-title {
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: var( --card-title);
+  transition-duration: 2s;
+}
+
+.card-description {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.card-detail-container {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-detail-container a {
+  font-size: 14px;
+  margin: 0 2px;
+}
+
+a {
+  color: var( --a-color);
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex: 1;
+  justify-content: space-evenly;
+}
+
+button {
+  color: var(--button-font-color);
+  padding: 5px 10px;
+  border-radius: 3px;
+  background: var(--button);
+  border: 2px solid var( --primary-lightSwitch-color);
+  cursor: pointer;
+  transition: all 0.2s;
+  transition-duration: 2s;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+input {
+  border: 2px solid var( --primary-lightSwitch-color);
+  margin: 0 1rem;
+  transition-duration: 2s;
+}

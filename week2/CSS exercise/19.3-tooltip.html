@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			.text {
+				width: 70%;
+				margin: 50px auto;
+				font-size: 1.2rem;
+			}
+
+			a {
+				position: relative;
+				text-decoration: none;
+				color: tomato;
+			}
+
+			/* position tooltip */
+			[data-tooltip]:hover::before {
+				content: attr(data-tooltip);
+				position: absolute;
+				height: 20px;
+				width: 180px;
+				bottom: 100%;
+				left: -5px;
+				border-radius: 30px;
+				background-color: gold;
+				color: indigo;
+				font-size: 0.9rem;
+				text-align: center;
+				padding-top: 5px;
+				box-sizing: inherit;
+			}
+
+			/* make tooltip look like a speech bubble */
+			[data-tooltip]:hover::after {
+				position: absolute;
+				bottom: 80%;
+				left: 50%;
+				border-top: 5px solid gold;
+				border-right: 5px solid transparent;
+				border-left: 5px solid transparent;
+				content: '';
+				width: 0;
+				font-size: 0;
+				line-height: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="text">
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit.
+				Mollitia ut dolorem autem et quas debitis itaque veritatis
+				laudantium libero possimus, alias temporibus? Provident
+				perferendis expedita tenetur earum dicta, ratione, facilis
+				consectetur illum reprehenderit laborum temporibus amet
+				voluptates unde quos. Provident sequi quaerat iste suscipit.
+				Fugiat impedit magni inventore natus numquam! Neque minus at
+				quaerat quibusdam odit fugiat
+				<a href="#" data-tooltip="what is this word">obcaecati</a>
+				consectetur sapiente reiciendis hic, incidunt, delectus ipsa
+				minima voluptatum architecto iste rem, autem dolorum voluptas
+				blanditiis. Iure, et. Ad eius nam praesentium non tenetur
+				repellat, in similique. Sed, officia harum, cumque fuga iusto
+				dignissimos reiciendis error delectus eligendi. Ea in blanditiis
+				soluta maxime neque reprehenderit architecto saepe
+				<a href="#" data-tooltip="i'm a tooltip!">ratione</a> dolorem.
+				Magni, necessitatibus deserunt sed harum nostrum, aperiam
+				nesciunt aspernatur numquam doloribus nihil voluptates dolorem
+				debitis. Accusamus minus iusto consequuntur quibusdam sit ipsa
+				mollitia rerum quasi ab vel, non voluptate cupiditate
+				perspiciatis tempora quod unde eum vitae nihil est sunt
+				similique libero enim dolor.
+			</p>
+		</div>
+	</body>
+</html>

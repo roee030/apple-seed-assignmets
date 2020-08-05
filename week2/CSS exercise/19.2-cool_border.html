@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			body {
+				background-color: black;
+				text-align: center;
+				overflow: hidden;
+			}
+			.container {
+				position: relative;
+				height: 30vh;
+				width: 50vw;
+				margin: 30vh auto;
+			}
+			.container span {
+				position: absolute;
+				color: white;
+				font-size: 5vw;
+				top: 11vh;
+				left: 12vw;
+			}
+
+			.border-1::before {
+				content: '';
+				position: absolute;
+				height: 30px;
+				width: 30px;
+				top: 0;
+				left: 0;
+				border-left: 3px solid red;
+				border-top: 3px solid red;
+			}
+
+			.border-1::after {
+				content: '';
+				position: absolute;
+				height: 30px;
+				width: 30px;
+
+				top: 0;
+				right: 0;
+
+				border-right: 3px solid red;
+				border-top: 3px solid red;
+			}
+
+			.border-2::before {
+				content: '';
+				position: absolute;
+				height: 30px;
+				width: 30px;
+				bottom: 0px;
+				right: 0px;
+				border-right: 3px solid red;
+				border-bottom: 3px solid red;
+			}
+
+			.border-2::after {
+				content: '';
+				position: absolute;
+				height: 30px;
+				width: 30px;
+				bottom: 0px;
+				left: 0px;
+				border-left: 3px solid red;
+				border-bottom: 3px solid red;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="border-1"></div>
+			<span>Cool Border</span>
+			<div class="border-2"></div>
+		</div>
+	</body>
+</html>
