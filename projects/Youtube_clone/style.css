@@ -1,0 +1,91 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 62.2%;
+	direction: rtl;
+	font-family: 'Roboto', Arial, sans-serif;
+}
+.navbar__wrapper {
+	height: 50px;
+	background-color: white;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.navbar__start {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.navbar__logo {
+	height: 40px;
+}
+.navbar__input__wrapper {
+	position: relative;
+}
+.navbar_keyboard {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+}
+.navbar__input {
+	width: 40vw;
+	justify-self: stretch;
+}
+.navbar__center {
+	display: flex;
+	justify-content: stretch;
+}
+.navbar__button__search {
+	padding: 0 20px;
+}
+.navbar__end {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.navbar__end div {
+	padding: 0 1rem;
+}
+.navbar__end i {
+	color: #707070;
+}
+.notifications {
+	position: relative;
+}
+.bell {
+	position: relative;
+}
+
+.notifications > .notifications_number {
+	height: 9px;
+	width: 9px;
+	font-size: 5px;
+	border-radius: 50%;
+	background-color: #cc0000;
+	position: absolute;
+	top: 0px;
+	left: 5px;
+	color: white;
+	text-align: center;
+	font-family: 'Roboto', Arial, sans-serif;
+}
+.user {
+	height: 20px;
+
+	background-color: #89888b;
+	width: 20px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.user_img {
+	height: 20px;
+	border-radius: 50%;
+	width: 20px;
+}
