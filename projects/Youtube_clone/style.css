@@ -89,3 +89,28 @@ html {
 	border-radius: 50%;
 	width: 20px;
 }
+/* Main section */
+.main__section__container {
+	display: flex;
+}
+.main__section {
+	width: 85%;
+	height: 100%;
+	background-color: violet;
+	display: flex;
+	flex-wrap: wrap;
+}
+.child {
+	flex: 1 0 21%; /* explanation below */
+	margin: 5px;
+	height: 100px;
+	background-color: blue;
+}
+.side__section {
+	width: 15%;
+	background-color: tomato;
+}
+.side__section {
+	display: flex;
+	flex-direction: column;
+}
