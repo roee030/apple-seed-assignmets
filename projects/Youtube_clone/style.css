@@ -100,10 +100,26 @@ html {
 	display: flex;
 	flex-wrap: wrap;
 }
-.child {
-	flex: 1 0 21%; /* explanation below */
+.video__container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.video__cover {
+}
+.video__cover__img {
+	width: 220px;
+	height: 120px;
+}
+.video__user__logo img {
+	height: 20px;
+	width: 20px;
+	border-radius: 50%;
+}
+.video__component {
+	flex: 1 0 21%;
 	margin: 5px;
-	height: 100px;
+	height: 200px;
 	background-color: blue;
 }
 .side__section {
