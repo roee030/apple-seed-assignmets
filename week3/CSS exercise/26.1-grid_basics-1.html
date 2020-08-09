@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Grid</title>
+		<style>
+			.item1 {
+				grid-area: header1;
+				background-color: red;
+			}
+			.item2 {
+				grid-area: header2;
+				background-color: blue;
+			}
+			.item3 {
+				grid-area: side;
+				background-color: green;
+			}
+			.item4 {
+				grid-area: main;
+				background-color: purple;
+			}
+			.item5 {
+				grid-area: footer;
+				background-color: yellow;
+			}
+			.container {
+				display: grid;
+				grid-template-areas:
+					'header1 header1 header2 header2'
+					'side main main main'
+					'footer footer footer footer';
+				grid-gap: 1rem;
+			}
+			.item {
+				border-radius: 20px;
+				height: 80px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="item1 item"></div>
+			<div class="item2 item"></div>
+			<div class="item3 item"></div>
+			<div class="item4 item"></div>
+			<div class="item5 item"></div>
+		</div>
+	</body>
+</html>
