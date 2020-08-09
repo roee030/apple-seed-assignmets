@@ -13,6 +13,8 @@ html {
 	background-color: white;
 	display: flex;
 	align-items: center;
+	width: 100%;
+	position: fixed;
 	justify-content: space-around;
 }
 .navbar__start {
@@ -92,11 +94,12 @@ html {
 /* Main section */
 .main__section__container {
 	display: flex;
+	padding-top: 50px;
 }
 .main__section {
 	width: 85%;
 	height: 100%;
-	background-color: violet;
+	background-color: #f9f9f9;
 	display: flex;
 	flex-wrap: wrap;
 }
@@ -116,17 +119,37 @@ html {
 	width: 20px;
 	border-radius: 50%;
 }
+.video__info {
+	display: flex;
+}
+.video__info div {
+	padding: 3px 5px;
+}
 .video__component {
-	flex: 1 0 21%;
-	margin: 5px;
+	flex: 1 0 20%;
 	height: 200px;
-	background-color: blue;
+	width: 150px;
+	margin: 25px;
+	background-color: transparent;
 }
-.side__section {
-	width: 15%;
-	background-color: tomato;
-}
+
+/* side section */
 .side__section {
 	display: flex;
 	flex-direction: column;
+	justify-content: flex-start;
+	width: 15%;
+	background-color: white;
+	overflow: scroll;
+}
+
+.video__guide {
+	margin: 5px;
+
+	padding: 12px;
+	font-size: 11px;
+	background-color: transparent;
+}
+.video__guide:hover {
+	background-color: #f9f9f9;
 }
