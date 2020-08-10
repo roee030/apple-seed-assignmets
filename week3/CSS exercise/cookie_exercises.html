@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>cookie_exercises</title>
+        
+        <script
+  src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+  crossorigin="anonymous"></script>
+  <script>
+      
+  </script>
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+				box-sizing: border-box;
+			}
+			.main {
+				height: 120vh;
+			}
+			.sticky__navbar {
+				height: 35px;
+				width: 100%;
+				background-color: red;
+				display: flex;
+				position: fixed;
+				justify-content: center;
+				box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16),
+					0 3px 6px rgba(0, 0, 0, 0.23);
+			}
+			.nav__bar__text {
+				font-size: 2vw;
+				color: black;
+				overflow: auto;
+				text-align: center;
+                align-self: center;
+                justify-content: center;
+	            align-items: center;
+			}
+			.nav__bar__text a {
+				color: gray;
+			}
+
+			.nav__bar__btn {
+				color: white;
+				cursor: pointer;
+				border: none;
+                font-size: 30px;
+                justify-items: self-start;
+				order: 1;
+				padding: 1px 5px;
+			
+				background-color: rgb(160, 14, 14);
+            }
+            /* RIGHT POPUP */
+            .left__cookie__popup{
+                background-color: purple;
+                position: fixed;
+                right: 0;
+                bottom: 0;
+                display: flex;
+                flex-direction: column;
+                padding: 8px;
+                color: white;
+                width: 17rem;
+                margin:20px;
+                border-radius: 20px;
+            }
+            .left__cookie__popup__btn{
+                border-color: rgb(255, 255, 255);
+                background-color: transparent;
+                color: white;
+                border-radius: 10px;
+                text-transform: uppercase;
+            }
+            .right__cookie__popup{
+                background-color: black;
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                display: flex;
+                flex-direction: column;
+                padding: 8px;
+                color: white;
+                width: 15rem;
+                margin:20px;
+            }
+            .cookie__popup__text a{
+                color: turquoise;
+            }
+            .right__cookie__popup__btn{
+                color: chocolate;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                margin: 3px;
+                cursor: pointer;
+                text-transform: uppercase;
+            }
+            .menu{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                list-style: none;
+                text-transform: uppercase;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                background-color: crimson;
+                padding: 5rem;
+                align-items: center;
+                text-align: center;
+                box-shadow: -5px -5px 30px 5px red, 5px 5px 30px 5px blue;
+                animation: fadein 2s;
+                }
+                @keyframes fadein {
+                    from { opacity: 0}
+                    to   { opacity: 1}
+                }
+            .menu > li{
+                margin: 15px;
+                cursor: pointer;
+              
+
+            }
+
+            
+            #roee:checked + .sticky__navbar{
+                display: none;
+            }
+
+		</style>
+	</head>
+	<body>
+		<div class="main">
+            <!-- sticky navbar -->
+			<div class="sticky__navbar">
+				<button class="nav__bar__btn">&times;</button>
+
+				<div class="nav__bar__text">
+					
+						Lorem ipsum dolor sit amet consectetur adipisicing
+						elit. Dignissimos commodi placeat unde explicabo
+						<a href="#">nemo?</a>
+					</span>
+				</div>
+            </div>
+            <!-- right__cookie__popup  -->
+            <div class="left__cookie__popup">
+                <div class="cookie__popup__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, inventore amet quasi quod iure cum?</div>
+                <button class="left__cookie__popup__btn">ok</button>
+            </div>
+            <!-- right__cookie__popup -->
+            <div class="right__cookie__popup">
+                <div class="cookie__popup__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, inventore amet quasi <a href=""> quod iure cum?</a></div>
+                <div class="right__cookie__popup__btn">okay</div>
+            </div>
+        </div>
+        <div class="menu">
+            <h1 >Custom Checkboxes</h1>
+                <label class="container">One
+                <input id="roee" type="checkbox" checked="checked">
+                <span class="checkmark"></span>
+                </label>
+                <label class="container">Two
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                </label>
+                <label class="container">Three
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                </label>
+          
+        </div>
+	</body>
+</html>
