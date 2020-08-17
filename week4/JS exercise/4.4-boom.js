@@ -1,7 +1,9 @@
 function boomboom(n) {
 	for (var i = 1; i < n; i++) {
-		if (i % 7 == 0 || boom(i)) {
+		if (i % 7 == 0 && boom(i)) {
 			console.log('BOOM-BOOM');
+		} else if (i % 7 == 0 || boom(i)) {
+			console.log('BOOM');
 		} else {
 			console.log(i);
 		}
