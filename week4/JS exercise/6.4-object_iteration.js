@@ -2,7 +2,9 @@ const obj1 = {
 	firstName: 'Roee',
 	lastName: 'Angel',
 };
-function swapArg(obj1) {
-	return { firstName: obj1.lastName, lastName: obj1.firstName };
-}
-swapArg(obj1);
+
+const obj2 = Object.assign(
+	{},
+	...Object.entries(obj1).map(([a, b]) => ({ [b]: a }))
+);
+console.log(obj2);
