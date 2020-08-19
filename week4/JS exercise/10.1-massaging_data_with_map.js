@@ -48,12 +48,13 @@ const nameArray = objectName(data);
 function objectDate(obj) {
 	let dateArray = [];
 	obj.forEach((element) => {
-		if (element.birthday.substring(5) < 1990) dateArray.push(element);
+		if (parseInt(element.birthday.split('-')[2]) < 1990)
+			dateArray.push(element);
 	});
 	return dateArray;
 }
 const dateArray = objectDate(data);
-// console.log(dateArray);
+console.log(dateArray);
 
 //Q3
 
@@ -73,4 +74,4 @@ function foodObj(data) {
 	return outfood;
 }
 const foodresult = foodObj(data);
-console.log(foodresult);
+// console.log(foodresult);
