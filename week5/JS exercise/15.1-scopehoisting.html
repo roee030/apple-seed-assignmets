@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			//              1
+			function funcA() {
+				let a = 1;
+				console.log(a);
+				console.log(foo());
+
+				function foo() {
+					return 2;
+				}
+			}
+			//funcA();
+			//The declaration of var is not good because its
+			//assign globally ( and also to the window object)
+			//also I move up the variable to the top.
+
+			//              2
+
+			var fullName = 'John Doe';
+			var obj = {
+				fullName: 'Colin Ihrig',
+				prop: {
+					fullName: 'Aurelio De Rosa',
+					getFullName: function () {
+						return this.fullName;
+					},
+				},
+			};
+			//console.log(obj.prop.getFullName());
+			var test = obj.prop.getFullName;
+			//console.log(test());
+			//Here is the different between the scopes
+			//this -> object
+			//this -> window
+
+			//          3
+
+			// function funcB() {
+			// 	let a = (b = 0);
+			// 	a++;
+			// 	return a;
+			// }
+			// funcB();
+			// console.log(typeof a); //scoped to the function
+			// console.log(typeof b); //global scope
+
+			//                  4
+			// function funcC() {
+			// 	console.log('1');
+			// }
+			// funcC();
+			// function funcC() {
+			// 	console.log('2');
+			// }
+			// funcC();
+			//function hoist to the top.
+			//we will take the last function.
+
+			//          5
+
+			// function funcD1() {
+			// 	d = 1;
+			// }
+			// funcD1();
+			// console.log(d); //1
+			// function funcD2() {
+			// 	var e = 1;
+			// }
+			// funcD2();
+			// console.log(e); //undefined
+
+			//          6
+			function funcE() {
+				console.log('Value of f in local scope: ', f); //undefined
+			}
+			console.log('Value of f in global scope: ', f); //1
+			var f = 1;
+			funcE();
+		</script>
+	</body>
+</html>
