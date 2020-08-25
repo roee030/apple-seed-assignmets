@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<!-- <script src="./script.js" defer></script> -->
+	</head>
+	<body>
+		<ul>
+			<li>title 1</li>
+			<li class="start-here">title 2</li>
+			<li>
+				<ul>
+					<li>sub title 1</li>
+					<li>sub title 2</li>
+					<li>sub title 3</li>
+				</ul>
+			</li>
+			<li>title 3</li>
+		</ul>
+		<div><p>Hello World!</p></div>
+		<script>
+			//1
+			const li = document.querySelector('.start-here');
+			li.innerHTML = 'Main title';
+
+			//2
+			const li4 = document.createElement('li');
+			li4.innerHTML = 'sub title 4';
+			const ulli = document.getElementsByTagName('ul')[1];
+			ulli.appendChild(li4);
+
+			//3
+			var allSelects = document.getElementsByTagName('li');
+			var lastSelect = allSelects[allSelects.length - 1];
+			lastSelect.remove();
+			//4
+			document.title = 'MAster of DOM';
+			//5
+			document.querySelector('p').innerHTML = 'Roee';
+		</script>
+	</body>
+</html>
