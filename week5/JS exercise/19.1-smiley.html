@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<style></style>
+	<body>
+		<form>
+			<input type="text" />
+			<button type="button">submit</button>
+		</form>
+
+		<script>
+			const btn = document.querySelector('button');
+			const target = document.querySelector('input');
+			const form = document.querySelector('form');
+			let valueOfInput = '';
+
+			btn.addEventListener('click', () => {
+				valueOfInput = target.value;
+				if (valueOfInput.match(/\b[0-9]+\b/gm)) {
+					console.log('parse and add img of smiley');
+					addSmiley(valueOfInput);
+				} else {
+					errorMsg();
+				}
+			});
+
+			const addSmiley = (n) => {
+				const it = parseInt(n);
+				const errorMsg = document.querySelector('.errorMsgText');
+				if (errorMsg) errorMsg.innerText = '';
+				//delete the previous smileys
+				document.querySelectorAll('.smileyIMG').forEach(function (a) {
+					a.remove();
+				});
+				//add the new smileys
+				for (let index = 0; index < it; index++) {
+					const smileyIMG = document.createElement('img');
+					smileyIMG.classList.add('smileyIMG');
+					smileyIMG.src =
+						'https://i.pinimg.com/originals/f2/4c/e0/f24ce09855f117cc3d462436f3e290db.png';
+					smileyIMG.style.width = 30 + 'px';
+					smileyIMG.style.height = 30 + 'px';
+					form.insertAdjacentElement('afterend', smileyIMG);
+				}
+			};
+			const errorMsg = () => {
+				//remove all the smileys
+				document.querySelectorAll('.smileyIMG').forEach(function (a) {
+					a.remove();
+				});
+				//No repeat
+				if (document.querySelector('.errorMsgText')) {
+					document.querySelector('.errorMsgText').innerHTML =
+						'You must write only numbers!';
+					return;
+				}
+				//create the p tag with the error msg
+				const p = document.createElement('p');
+				p.classList.add('errorMsgText');
+				p.textContent = 'You must write only numbers!';
+				form.insertAdjacentElement('afterend', p);
+			};
+		</script>
+	</body>
+</html>
