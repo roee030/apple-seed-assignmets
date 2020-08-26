@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			let flag = false;
+			const lightbulbSrcOff = 'lightbulb.png';
+			const lightbulbSrcOn = 'lightbulb_on.png';
+			const lightbulbImg = document.createElement('img');
+			lightbulbImg.src = lightbulbSrcOff;
+			document.body.insertAdjacentElement('afterbegin', lightbulbImg);
+			lightbulbImg.addEventListener('click', () => {
+				flag = !flag;
+				flag
+					? (lightbulbImg.src = lightbulbSrcOn)
+					: (lightbulbImg.src = lightbulbSrcOff);
+			});
+		</script>
+	</body>
+</html>

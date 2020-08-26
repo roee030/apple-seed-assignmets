@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<input type="checkbox" />
+		<script>
+			let checkbox = document.querySelector('input');
+			const img = document.createElement('img');
+			img.src =
+				'https://pluralsight2.imgix.net/paths/images/javascript-542e10ea6e.png';
+			document.body.insertAdjacentElement('afterend', img);
+			img.style.display = 'none';
+			checkbox.addEventListener('click', () => {
+				checkbox.checked
+					? (img.style.display = 'block')
+					: (img.style.display = 'none');
+			});
+		</script>
+	</body>
+</html>
