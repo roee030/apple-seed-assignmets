@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Stopwatch</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<p id="output"></p>
+		<div id="controls">
+			<button id="startPause" onclick="startPause()">Start</button>
+			<button onclick="reset()">Reset</button>
+		</div>
+		<script>
+			var time = 0;
+			var running = 0;
+
+			function startPause() {
+				if (running == 0) {
+					running = 1;
+					increment();
+					document.getElementById('startPause').innerHTML = 'Pause';
+				} else {
+					running = 0;
+					document.getElementById('startPause').innerHTML = 'Resmume';
+				}
+			}
+
+			function reset() {
+				running = 0;
+				time = 0;
+				document.getElementById('startPause').innerHTML = 'Start';
+				document.getElementById('output').innerHTML = '00:00:00:00';
+			}
+
+			function increment() {
+				setTimeout(function () {
+					if (running == 1) {
+						time++;
+						var hour = Math.floor(time / 60 / 60);
+						var mins = Math.floor(time / 10 / 60);
+						var secs = Math.floor((time / 10) % 60);
+						var tenths = time % 10;
+						if (hour < 10) {
+							hour = '0' + hour;
+						}
+						if (mins < 10) {
+							mins = '0' + mins;
+						}
+						if (secs < 10) {
+							secs = '0' + secs;
+						}
+						document.getElementById('output').innerHTML =
+							hour + ':' + mins + ':' + secs + ':' + '0' + tenths;
+						increment();
+					}
+				}, 100);
+			}
+		</script>
+	</body>
+</html>
