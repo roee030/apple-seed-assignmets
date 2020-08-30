@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>MyClock</title>
+		<style>
+			*,
+			*::before,
+			*::after {
+				box-sizing: border-box;
+
+				margin: 0;
+				padding: 0;
+				background: black;
+			}
+
+			.clock {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translateX(-50%) translateY(-50%);
+				color: #17d4fe;
+				font-size: 60px;
+				font-family: Orbitron;
+				letter-spacing: 7px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="clock">
+			<span class="hour"></span>
+			<span class="minute"></span>
+			<span class="second"></span>
+		</div>
+		<script>
+			const mySecond = document.querySelector('.second');
+			const myMinute = document.querySelector('.minute');
+			const myHour = document.querySelector('.hour');
+			setInterval(() => {
+				const myDate = new Date();
+				myDate.getSeconds().toString().length == 1
+					? (mySecond.innerHTML = '0' + myDate.getSeconds())
+					: (mySecond.innerHTML = myDate.getSeconds());
+
+				myMinute.innerHTML = myDate.getMinutes() + ':';
+				myHour.innerHTML = myDate.getHours() + ':';
+			}, 1000);
+		</script>
+	</body>
+</html>
