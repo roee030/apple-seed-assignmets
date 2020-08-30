@@ -3,17 +3,45 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>Stopwatch</title>
-		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" />
+		<style>
+			body {
+				background-color: black;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 62.5%;
+			}
+			.warper {
+				border: 1px solid darkblue;
+				background-color: wheat;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+			}
+			button {
+				margin: auto;
+				color: black;
+				font-size: 2rem;
+			}
+			#output {
+				height: 30px;
+			}
+			p {
+				font-size: 5rem;
+			}
+		</style>
 	</head>
 	<body>
-		<p id="output"></p>
-		<div id="controls">
-			<button id="startPause" onclick="startPause()">Start</button>
-			<button onclick="reset()">Reset</button>
+		<div class="warper">
+			<p id="output"></p>
+			<div id="controls">
+				<button id="startPause" onclick="startPause()">Start</button>
+				<button onclick="reset()">Reset</button>
+			</div>
 		</div>
 		<script>
-			var time = 0;
-			var running = 0;
+			let time = 0;
+			let running = 0;
 
 			function startPause() {
 				if (running == 0) {
@@ -22,7 +50,7 @@
 					document.getElementById('startPause').innerHTML = 'Pause';
 				} else {
 					running = 0;
-					document.getElementById('startPause').innerHTML = 'Resmume';
+					document.getElementById('startPause').innerHTML = 'Resume';
 				}
 			}
 
@@ -37,10 +65,10 @@
 				setTimeout(function () {
 					if (running == 1) {
 						time++;
-						var hour = Math.floor(time / 60 / 60);
-						var mins = Math.floor(time / 10 / 60);
-						var secs = Math.floor((time / 10) % 60);
-						var tenths = time % 10;
+						let hour = Math.floor(time / 60 / 60);
+						let mins = Math.floor(time / 10 / 60);
+						let secs = Math.floor((time / 10) % 60);
+						let tenths = time % 10;
 						if (hour < 10) {
 							hour = '0' + hour;
 						}
