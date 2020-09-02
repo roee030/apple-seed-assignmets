@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      img {
+        width: 150px;
+      }
+      .head-img {
+        width: 450px;
+        margin: 0 auto;
+      }
+      .head-img > img {
+        height: 250px;
+        width: 500px;
+      }
+      .pokemon-card {
+        border: 1px solid black;
+        margin: 5px;
+      }
+      .pokemon-card-wraper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      button {
+        background-color: brown;
+        border: none;
+        padding: 5px;
+        font-size: 15px;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <figure class="head-img">
+      <img
+        src="https://thetecheducation.com/wp-content/uploads/2020/04/pokemon-feat-image.jpg"
+        alt=""
+      />
+    </figure>
+
+    <div class="pokemon-card-wraper">
+      <div class="pokemon-card">
+        <img
+          src="https://i.pinimg.com/originals/76/47/9d/76479dd91dc55c2768ddccfc30a4fbf5.png"
+          alt=""
+        />
+        <div class="methods">
+          <button class="call_btn">call pokemon</button>
+          <button class="atk_btn">attack</button>
+        </div>
+      </div>
+      <div class="pokemon-card">
+        <img
+          src="https://vignette.wikia.nocookie.net/pokemon-talk6406/images/4/43/Bulbasaur.png/revision/latest?cb=20170506185349"
+          alt=""
+        />
+        <div class="methods">
+          <button class="call_btn">call pokemon</button>
+          <button class="atk_btn">attack</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      const call_btn = document
+        .querySelector(".call_btn")
+        .addEventListener("click");
+      function Pokemon(pokemonName, pokemonType, pokemonAttackList) {
+        this.name = pokemonName;
+        this.type = pokemonType;
+        this.attackList = pokemonAttackList;
+      }
+
+      const Pikachu = new Pokemon("Pikachu", "Electric", [
+        "Thunderbolt",
+        "Discharge",
+      ]);
+      const Bulbasaur = new Pokemon("Bulbasaur", "Grass ", [
+        "Power Whip",
+        "Seed Bomb",
+      ]);
+      const Charizard = new Pokemon("Charizard", "Fire ", [
+        "Fire Punch",
+        "Flame Burst",
+      ]);
+
+      Pokemon.prototype.callPokemon = function () {
+        console.log(`I choose you, ${this.name} !!`);
+      };
+      Pokemon.prototype.attack = function (attack_number) {
+        console.log(`${this.name} used ${this.attackList[attack_number]}!`);
+      };
+      Pikachu.callPokemon();
+      Pikachu.attack(1);
+    </script>
+  </body>
+</html>
