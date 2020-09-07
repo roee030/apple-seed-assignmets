@@ -24,15 +24,25 @@ const sortWords = (arr) => {
     }
   });
 };
-
+const add1 = (arr) => {
+  return new Promise((resolve, reject) => {
+    if (arr) {
+      for (let index = 0; index < arr.length; index++) {
+        arr[index] += "2";
+      }
+      resolve(arr);
+    }
+  });
+};
 const checkArr = ["aasdf", "aaasdf"];
 const failArr = [123, "asd"];
 
 makeAllCaps(checkArr)
   .then(sortWords)
+  .then(add1)
   .then((result) => console.log(result))
   .catch((error) => console.log(error));
-makeAllCaps(failArr)
-  .then(sortWords)
-  .then((result) => console.log(result))
-  .catch((error) => console.log(error));
+// makeAllCaps(failArr)
+//   .then(sortWords)
+//   .then((result) => console.log(result))
+//   .catch((error) => console.log(error));
