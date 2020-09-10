@@ -1,13 +1,11 @@
 import React from "react";
 import logo from "./logo.svg";
-import ReactDOM from "react-dom";
 import "./App.css";
-import Box1 from "./Box1";
-
+import Quiz from "./Quiz";
 function App() {
   return (
     <div className="App">
-      <Box1 />
+      <Quiz></Quiz>
     </div>
   );
 }
