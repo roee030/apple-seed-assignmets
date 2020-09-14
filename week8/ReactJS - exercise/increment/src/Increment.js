@@ -5,7 +5,7 @@ export default class Increment extends Component {
     super(props);
     this.state = {
       value: 0,
-      increcea: () => {
+      increase: () => {
         this.setState({ value: this.state.value + 1 });
       },
     };
@@ -13,7 +13,7 @@ export default class Increment extends Component {
   render() {
     return (
       <div>
-        <button onClick={this.state.increcea}>click me</button>
+        <button onClick={this.state.increase}>click me</button>
         <span>{this.state.value}</span>
       </div>
     );
