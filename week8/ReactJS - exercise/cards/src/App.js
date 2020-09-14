@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import Card from "./Card";
 function App() {
@@ -10,9 +9,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Card description={"description1"} title={"title1"} src={pic1}></Card>
-        <Card description={"description1"} title={"title2"} src={pic2}></Card>
-        <Card description={"description1"} title={"title3"} src={pic3}></Card>
+        <Card description="description1" title="title1" src={pic1}></Card>
+        <Card description="description1" title="title2" src={pic2}></Card>
+        <Card description="description1" title="title3" src={pic3}></Card>
       </header>
     </div>
   );
