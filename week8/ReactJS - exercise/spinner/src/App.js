@@ -13,7 +13,6 @@ class App extends Component {
     }, 5000);
   };
   render() {
-    console.log(this.state);
     return (
       <div className="App">
         {this.state.isLoading ? <Spinner /> : <h1>TADAAAAAAAAA </h1>}
