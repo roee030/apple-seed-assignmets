@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.searchBar {
+  background-color: darkblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  position: relative;
+}
+.searchBarForm {
+  position: relative;
+}
+.searchBarInput {
+  padding: 10px 60px;
+}
+.searchBarBtn {
+  position: absolute;
+  right: 0px;
+  display: flex;
+  align-items: center;
+  top: 0px;
+  padding: 10px;
+  justify-content: stretch;
+}
