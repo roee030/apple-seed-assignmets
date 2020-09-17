@@ -11,9 +11,6 @@ export default function Search(props) {
           name="search"
           onChange={props.onChange}
         />
-        <button type="submit" className="searchBarBtn">
-          <i>Hit</i>
-        </button>
       </form>
     </div>
   );
