@@ -13,9 +13,10 @@ export default class Products extends Component {
       return (
         <Link key={element.id} to={`/products/${element.id}`}>
           {element.title}
+          {element.image}
         </Link>
       );
     });
-    return <div>{product_title}</div>;
+    return <div className="productsTitle">{product_title}</div>;
   }
 }

@@ -2,9 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 62.2%;
 }
 .header {
-  font-size: 20px;
+  font-size: 3.5rem;
   display: flex;
   justify-content: space-around;
   margin: 0px 0;
@@ -15,4 +16,42 @@
   color: aliceblue;
   text-decoration: none;
   cursor: pointer;
+}
+.homepage {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 5rem;
+  justify-content: center;
+}
+.productsTitle {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+.productsTitle > * {
+  margin: 15px;
+  color: black;
+  text-decoration: none;
+  font-size: 3rem;
+  cursor: pointer;
+}
+.productCard {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-content: center;
+  font-size: 5rem;
+  padding: 20px;
+  margin-top: 20px;
+  border: 1px solid black;
+}
+.productCard > img {
+  display: block;
+  margin: 0 auto;
+}
+.cardContainer {
+  display: flex;
+  justify-content: center;
 }

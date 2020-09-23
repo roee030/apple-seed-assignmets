@@ -8,12 +8,14 @@ export default function ProductDetail(props) {
   console.log(singleProductById);
 
   return (
-    <div className="productCard">
-      <h1>{singleProductById[0].title}</h1>
-      <h5>{singleProductById[0].size}</h5>
-      <img src={singleProductById[0].imageUrl}></img>
-      <h3>Price: ${singleProductById[0].price}</h3>
-      <Link to="/products">Back to product page</Link>
+    <div className="cardContainer">
+      <div className="productCard">
+        <h1>{singleProductById[0].title}</h1>
+        <h5>{singleProductById[0].size}</h5>
+        <img src={singleProductById[0].imageUrl}></img>
+        <h3>Price: ${singleProductById[0].price}</h3>
+        <Link to="/products">Back to product page</Link>
+      </div>
     </div>
   );
 }
