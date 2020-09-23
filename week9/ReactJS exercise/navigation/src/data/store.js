@@ -1,4 +1,4 @@
-[
+const data = [
   {
     title: "Stylish hat",
     imageUrl: "https://i.ibb.co/z8GM1Mh/tie.jpg",
@@ -28,3 +28,4 @@
     id: 4,
   },
 ];
+export default data;

@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Link } from "react-router-dom";
 import Header from "./components/Header";
 import Products from "./components/Products";
 import Home from "./components/Home";
-
+import ProductDetail from "./components/ProductDetail";
 function App() {
   return (
     <div className="App">
@@ -12,7 +12,8 @@ function App() {
         <div>
           <Header />
           <Route path="/" exact component={Home}></Route>
-          <Route path="/products" component={Products}></Route>
+          <Route path="/products" exact component={Products}></Route>
+          <Route path="/products/:id" component={ProductDetail}></Route>
         </div>
       </BrowserRouter>
     </div>
