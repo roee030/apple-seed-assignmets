@@ -1,11 +1,14 @@
 import React from "react";
 import data from "../data/store";
 import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
+
 export default function ProductDetail(props) {
+  const { id } = useParams();
   const singleProductById = data.filter(
     (element) => element.id == props.match.params.id
   );
-  console.log(singleProductById);
+  console.log(id);
 
   return (
     <div className="cardContainer">
