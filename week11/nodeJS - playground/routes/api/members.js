@@ -19,8 +19,20 @@ router.get('/:id', (req, res) => {
   }
 });
 
-//Create Member 
-router.post('/',(req,res)=>{
-    res.send(req.body)
-})
+// Create Member
+router.post('/', (req, res) => {
+  const newMember = {
+    ...req.body,
+    id: uuid.v4(),
+    status: 'active'
+  };
+
+  if (!newMember.name || !newMember.email) {
+    return res.status(400).json({ msg: 'Please include a name and email' });
+  }
+
+  members.push(newMember);
+  res.json(members);
+  // res.redirect('/');
+});
 module.exports = router;
